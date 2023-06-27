@@ -131,7 +131,10 @@ GEM
     nio4r (2.5.9)
     nokogiri (1.15.2-x64-mingw-ucrt)
       racc (~> 1.4)
+    nokogiri (1.15.2-x86-mingw32)
+      racc (~> 1.4)
     pg (1.5.3-x64-mingw-ucrt)
+    pg (1.5.3-x86-mingw32)
     public_suffix (5.0.1)
     puma (5.6.6)
       nio4r (~> 2.0)
@@ -214,6 +217,7 @@ GEM
 
 PLATFORMS
   x64-mingw-ucrt
+  x86-mingw32
 
 DEPENDENCIES
   bootsnap
@@ -237,4 +241,4 @@ RUBY VERSION
    ruby 3.2.2p53
 
 BUNDLED WITH
-   2.4.13
+   2.4.14
