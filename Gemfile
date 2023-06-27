@@ -54,6 +54,9 @@ group :development, :test do
   gem 'dotenv-rails'
 end
 
+gem 'devise'
+gem 'letter_opener'
+
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem 'web-console'
