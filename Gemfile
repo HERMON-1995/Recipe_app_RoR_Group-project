@@ -76,3 +76,5 @@ group :test do
 end
 
 gem 'rspec-rails'
+
+gem 'cancancan', '~> 3.5'
