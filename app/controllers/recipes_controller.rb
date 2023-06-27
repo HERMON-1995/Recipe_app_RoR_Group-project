@@ -9,9 +9,6 @@ class RecipesController < ApplicationController
     if @recipe.destroy
       flash[:notice] = 'Recipe was successfully deleted.'
       redirect_to recipes_path
-    else
-      flash[:error] = 'There was an error deleting the recipe.'
-      redirect_to recipes_path
     end
   end
 end

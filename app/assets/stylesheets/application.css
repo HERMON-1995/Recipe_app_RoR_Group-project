@@ -13,3 +13,20 @@
  *= require_tree .
  *= require_self
  */
+
+.recipes {
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.recipe-card {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 20% 70%;
+  column-gap: 5%;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+}
