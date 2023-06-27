@@ -30,3 +30,40 @@
   margin-bottom: 20px;
   padding: 10px 20px;
 }
+
+.menu {
+  position: absolute;
+}
+
+.menu-btn {
+  background: none;
+  padding: 8px 10px;
+  border-radius: 3px;
+  border: 2px solid #9a9a9a;
+}
+
+.menu-list {
+  background: wheat;
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-list li {
+  padding: 10px 15px;
+  border-bottom: 1px solid #9a9a9a;
+}
+
+.menu-list li:hover {
+  background: #ccc;
+}
+
+.menu:hover .menu-list {
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
