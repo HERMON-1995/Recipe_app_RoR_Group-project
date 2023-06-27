@@ -9,6 +9,11 @@
   color: black;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .devise-container {
   display: flex;
   flex-direction: column;
@@ -62,23 +67,6 @@
   gap: 1.4rem;
 }
 
-.recipes {
-  width: 100%;
-  display: grid;
-  place-items: center;
-}
-
-.recipe-card {
-  width: 80%;
-  display: grid;
-  grid-template-columns: 20% 70%;
-  column-gap: 5%;
-  border: 1px solid #ccc;
-  border-radius: 20px;
-  margin-bottom: 20px;
-  padding: 10px 20px;
-}
-
 .menu {
   position: absolute;
 }
@@ -111,7 +99,24 @@
   display: block;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.recipes {
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.recipe-card {
+  width: 80%;
+  display: flex;
+  column-gap: 5%;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.delete-btn {
+  position: absolute;
+  cursor: pointer;
 }

@@ -1,14 +1,15 @@
 class RecipesController < ApplicationController
   def index
-    @recipes = Recipe.all
+    @user = User.find(params[:user_id])
+    @recipes = Recipe.includes(:user).where(user_id: @user.id)
   end
 
   def destroy
-    @recipe = Recipe.includes(:user).find(params[:id])
+    @recipe = Recipe.find_by(id: params[:id])
 
     return unless @recipe.destroy
 
     flash[:notice] = 'Recipe was successfully deleted.'
-    redirect_to recipes_path
+    redirect_to user_recipes_path(user_id: params[:user_id])
   end
 end

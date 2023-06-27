@@ -1,9 +1,9 @@
 <div class='menu'>
     <button type='submit' class='menu-btn'>Menu</button>
     <ul class='menu-list'>
-        <li><%= link_to 'Food', recipes_path%></li>
-        <li><%= link_to 'Recipes', recipes_path%></li>
-        <li><%= link_to 'Public Recipes', recipes_path%></li>
-        <li><%= link_to 'Shopping List', recipes_path%></li>
+        <li><%= link_to 'Food', user_foods_path(@user)%></li>
+        <li><%= link_to 'Recipes', user_recipes_path(@user)%></li>
+        <li><%= link_to 'Public Recipes', user_recipes_path(@user)%></li>
+        <li><%= link_to 'Shopping List', user_recipes_path(@user)%></li>
     </ul>
 </div>
