@@ -82,7 +82,6 @@ a {
 }
 
 .menu-list {
-  background: wheat;
   display: flex;
   list-style: none;
   padding: 0;
@@ -90,12 +89,13 @@ a {
 }
 
 .menu-list li {
+  margin: 0 2px;
   padding: 10px 15px;
   border-bottom: 1px solid #28a745;
 }
 
 .menu-list li:hover {
-  background: #28a745;
+  border: 1px solid #28a745;
 }
 
 .recipes-title {
@@ -104,15 +104,19 @@ a {
 
 .recipes {
   width: 100%;
-  display: grid;
-  place-items: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.recipes h1 {
+  margin: 20px 0;
 }
 
 .recipe-card {
   width: 80%;
-  display: flex;
-  align-items: center;
-  column-gap: 10%;
+  height: 16vh;
   border: 1px solid #ccc;
   border-radius: 20px;
   margin: 20px auto;
@@ -120,10 +124,21 @@ a {
   position: relative;
 }
 
-.delete-btn {
-  position: absolute;
-  cursor: pointer;
+.recipe-card a {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr;
 }
+
+/* .delete-btn {
+  border-radius: 6px;
+  padding: 3px 5px;
+  cursor: pointer;
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  z-index: 3;
+} */
 
 .food-table {
   margin-top: 20px;
