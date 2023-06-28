@@ -74,3 +74,7 @@ group :test do
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
+
+gem 'rspec-rails'
+
+gem 'cancancan', '~> 3.5'
