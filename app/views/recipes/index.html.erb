@@ -1,0 +1,13 @@
+<section class='recipes'>
+    <h1>Here is the recipe list</h1>
+    <% @recipes.each do |recipe| %>
+        
+    <div class='recipe-card'>
+        <%= link_to recipe_path(id: recipe.id), html: {class: 'recipe-card'} do%>
+            <%= render partial:'shared/recipe_card', locals: {recipe: recipe} %> 
+        <% end %>
+
+        <%= render partial: 'shared/delete_btn', locals: {model: recipe, url_path: recipe_path(id: recipe.id)}%>
+    </div>
+    <% end %>
+</section>
