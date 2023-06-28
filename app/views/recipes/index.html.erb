@@ -4,7 +4,7 @@
     <% @recipes.each do |recipe| %>
         
     <div class='recipe-card'>
-        <%= link_to recipe_path(id: recipe.id), html: {class: 'recipe-card'} do%>
+        <%= link_to recipe_path(id: recipe.id) do%>
             <%= render partial:'shared/recipe_card', locals: {recipe: recipe} %> 
         <% end %>
 
