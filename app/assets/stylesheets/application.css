@@ -101,14 +101,19 @@ a {
 
 .recipes {
   width: 100%;
-  display: grid;
-  place-items: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.recipes h1 {
+  margin: 20px 0;
 }
 
 .recipe-card {
   width: 80%;
-  display: flex;
-  column-gap: 5%;
+  height: 15vh;
   border: 1px solid #ccc;
   border-radius: 20px;
   margin-bottom: 20px;
@@ -116,7 +121,18 @@ a {
   position: relative;
 }
 
+.recipe-card a {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr;
+}
+
 .delete-btn {
-  position: absolute;
+  border-radius: 6px;
+  padding: 3px 5px;
   cursor: pointer;
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  z-index: 3;
 }
