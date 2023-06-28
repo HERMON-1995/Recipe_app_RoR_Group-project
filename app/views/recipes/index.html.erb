@@ -4,11 +4,11 @@
     <% @recipes.each do |recipe| %>
         
     <div class='recipe-card'>
-        <%= link_to user_recipe_path(id: @user.id, recipe_id: recipe.id), html: {class: 'recipe-card'} do%>
+        <%= link_to recipe_path(id: recipe.id), html: {class: 'recipe-card'} do%>
             <%= render partial:'shared/recipe_card', locals: {recipe: recipe} %> 
         <% end %>
 
-        <%= render partial: 'shared/delete_btn', locals: {model: recipe, url_path: user_recipe_path(id: @user.id, id: recipe.id)}%>
+        <%= render partial: 'shared/delete_btn', locals: {model: recipe, url_path: recipe_path(id: recipe.id)}%>
     </div>
     <% end %>
 </section>
