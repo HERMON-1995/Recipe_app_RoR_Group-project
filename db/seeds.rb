@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-# hermon = User.find_by(name: 'HERMON')
+hermon = User.create(name: 'HERMON')
 grace = User.create(name: "Grace Htet", email: "grace@htet.com", password: "password",confirmation_token: '23moe234f', confirmed_at: Time.now, confirmation_sent_at: Time.now)
 htet = User.create(name: "Htet Htet", email: "htet@htet.com", password: "password",confirmation_token: '263w7fvw', confirmed_at: Time.now, confirmation_sent_at: Time.now)
 
