@@ -1,10 +1,9 @@
 <div class='menu'>
-    <button type='submit' class='menu-btn'>Menu</button>
     <ul class='menu-list'>
-        <%# <li><%= link_to 'Food', foods_path(@user)%></li> %>
+        <li><%= link_to 'Food', foods_path%></li>
         <li><%= link_to 'Recipes', recipes_path%></li>
         <li><%= link_to 'Public Recipes', recipes_path%></li>
         <li><%= link_to 'Shopping List', recipes_path%></li>
     </ul>
-    <%= button_to "logout", destroy_user_session_path , method: :delete, class: "btn btn-outline-secondary" %>
+    <%= button_to "logout", destroy_user_session_path , method: :delete, class: 'add-food-link' %>
 </div>
