@@ -61,6 +61,14 @@ a {
   color: black;
 }
 
+.welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+}
+
 .new_user {
   display: flex;
   flex-direction: column;
@@ -68,19 +76,14 @@ a {
 }
 
 .menu {
-  position: absolute;
-}
-
-.menu-btn {
-  background: none;
-  padding: 8px 10px;
-  border-radius: 3px;
-  border: 2px solid #9a9a9a;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .menu-list {
   background: wheat;
-  display: none;
+  display: flex;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -88,15 +91,15 @@ a {
 
 .menu-list li {
   padding: 10px 15px;
-  border-bottom: 1px solid #9a9a9a;
+  border-bottom: 1px solid #28a745;
 }
 
 .menu-list li:hover {
-  background: #ccc;
+  background: #28a745;
 }
 
-.menu:hover .menu-list {
-  display: block;
+.recipes-title {
+  margin-top: 40px;
 }
 
 .recipes {
@@ -108,10 +111,11 @@ a {
 .recipe-card {
   width: 80%;
   display: flex;
-  column-gap: 5%;
+  align-items: center;
+  column-gap: 10%;
   border: 1px solid #ccc;
   border-radius: 20px;
-  margin-bottom: 20px;
+  margin: 20px auto;
   padding: 10px 20px;
   position: relative;
 }
@@ -119,4 +123,98 @@ a {
 .delete-btn {
   position: absolute;
   cursor: pointer;
+}
+
+.food-table {
+  margin-top: 20px;
+}
+
+.add-food {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
+}
+
+.add-food-link {
+  margin-top: 10px;
+  padding: 6px 12px;
+  background-color: #28a745;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+}
+
+.actions {
+  border-radius: 5px;
+  background-color: rgb(2, 177, 2);
+  border: 0;
+  color: white;
+  height: 20px;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.add-food-link:hover,
+.actions:hover {
+  border: 2px solid green;
+}
+
+.table-container {
+  border-collapse: collapse;
+  width: 80%;
+  max-width: 100%;
+  margin: 1rem auto;
+  background-color: #fff;
+  border-radius: 0.25rem;
+}
+
+.table-header {
+  background-color: #f8f9fa;
+}
+
+.table-cell {
+  border: 2px solid black;
+  padding: 0.75rem;
+}
+
+.delete-button {
+  background-color: transparent;
+  border: 1px solid #dc3545;
+  color: #dc3545;
+  padding: 0.375rem 0.75rem;
+  text-decoration: none;
+  border-radius: 0.25rem;
+}
+
+.delete-button:hover {
+  background-color: #dc3545;
+  color: white;
+  transition: all 0.2s;
+}
+
+.add-food-title {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.new-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  width: 30em;
+  margin: 50px auto;
+}
+
+.single-form-field {
+  margin-top: 20px;
+  width: 24em;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  padding: 5px;
 }
