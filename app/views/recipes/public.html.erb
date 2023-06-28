@@ -1,0 +1,18 @@
+<%= render 'shared/navigation' %>
+<section class='recipes'>
+    <h1>Here is the public recipe list</h1>
+    <% @recipes.each do |recipe| %>
+        
+    <div class='recipe-card'>
+        <%= link_to recipe_path(id: recipe.id) do%>
+            <h2><%= recipe.name%></h2>
+            <div class='recipe-detail'>
+                <p>Total food items: </p>
+                <p>Total Price: </p>
+            </div>
+        <% end %>
+
+        <%= render partial: 'shared/delete_btn', locals: {model: recipe, url_path: recipe_path(id: recipe.id)}%>
+    </div>
+    <% end %>
+</section>
