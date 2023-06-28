@@ -8,6 +8,10 @@ class RecipesController < ApplicationController
     @recipes = Recipe.includes(:user).where(public: true).order(created_at: :desc)
   end
 
+  def show
+    @recipe = Recipe.includes(:user).find_by(id: params[:id])
+  end
+
   def destroy
     @recipe = Recipe.find_by(id: params[:id])
 

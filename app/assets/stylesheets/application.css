@@ -130,16 +130,6 @@ a {
   grid-template-rows: 1fr;
 }
 
-/* .delete-btn {
-  border-radius: 6px;
-  padding: 3px 5px;
-  cursor: pointer;
-  position: absolute;
-  left: 20px;
-  bottom: 20px;
-  z-index: 3;
-} */
-
 .food-table {
   margin-top: 20px;
 }

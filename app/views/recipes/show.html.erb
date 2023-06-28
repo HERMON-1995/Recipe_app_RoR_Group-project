@@ -1,0 +1,24 @@
+<section>
+    <h1><%= @recipe.name %></h1>
+    <p><strong>Preparation time: <%= @recipe.preparation_time%></strong></p>
+    <p><strong>Cooking time: <%= @recipe.cooking_time%></strong></p>
+    <%if can? :manage, @recipe%>
+        <p><i><%= @recipe.description%></i></p>
+    <% end %>
+    <%= link_to 'Back to Recipes', recipes_path%>
+    <div>
+        <%= link_to 'Generate Shopping List', recipes_path,  class: 'add-food-link'%>
+        <%= link_to 'Add Ingedrient', recipes_path,  class: 'add-food-link'%>
+    </div>
+
+    <table class="table-container">
+        <thead>
+        <tr class="table-header">
+            <th scope="col" class="table-cell">Food</th>
+            <th scope="col" class="table-cell">Quantity</th>
+            <th scope="col" class="table-cell">Value</th>
+            <th scope="col" class="table-cell">Actions</th>
+        </tr>
+        </thead>
+    </table>
+</section>
