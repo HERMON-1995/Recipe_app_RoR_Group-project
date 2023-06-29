@@ -23,3 +23,7 @@ chocolate_truffle = Recipe.create(name: "Chocolate Truffle", description: "Warm 
     Refrigerate: Refrigerate until the mixture is set, about 1-2 hours.\n
     Scoop: Scoop into balls with a cookie scoop or spoon.\n
     Roll: Roll into balls and coat in toppings like sprinkles, cocoa powder, or crushed nuts. You can also dip the truffles in melted or tempered chocolate.", user_id: grace.id)
+
+chocolate = Food.create(name: 'Chocolate', measurement_unit: 'g', price: 1.5, quantity: 10, user_id: grace.id)
+
+RecipeFood.create(quantity: 100, recipe_id: chocolate_truffle.id, food_id: chocolate.id)
