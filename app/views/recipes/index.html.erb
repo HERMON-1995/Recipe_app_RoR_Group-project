@@ -1,6 +1,10 @@
 <%= render 'shared/navigation' %>
 <section class='recipes'>
     <h1 class='recipes-title'>Here is the recipe list</h1>
+    <div class="add-food">
+        <%= link_to "Create Recipe", new_recipe_path , class: "add-food-link" %>
+    </div> 
+
     <% @recipes.each do |recipe| %>
         
     <div class='recipe-card'>

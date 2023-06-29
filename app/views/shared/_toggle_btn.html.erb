@@ -1,0 +1,12 @@
+<%= form_with model: @recipe do |f|%>
+    <div class='toggle'>
+        <%if recipe.public%>
+          <%= f.label :public, 'Public', class: 'toggle-btn public'%>
+          <%= f.check_box :public, class: 'toggle-checkbox', checked: true, disabled: true%>
+        <%else %>
+          <%= f.label :public, 'Private', class: 'toggle-btn private'%>
+          <%= f.check_box :public, class: 'toggle-checkbox', disabled: true%>
+        <% end %>
+        <span class='slider'></span>
+    </div>
+<% end %>
