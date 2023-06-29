@@ -52,7 +52,12 @@ RSpec.describe 'Recipes', type: :system do
       assert_current_path new_recipe_recipe_food_path(@recipe_one)
     end
 
-    scenario 'When I click on back to recipes, it redirects me to that General Shopping list page' do
+    scenario 'When I click on Generate shopping list, it redirects me to that general shopping list page' do
+      click_on 'Generate Shopping List'
+      assert_current_path general_shopping_lists_path
+    end
+
+    scenario 'When I click on back to recipes, it redirects me to that Recipes page' do
       click_link '<< Back to Recipes'
       assert_current_path recipes_path
     end
