@@ -19,7 +19,7 @@
         <tr>
           <td class="table-cell"><%= food.name %></td>
           <td class="table-cell"><%= food.measurement_unit %></td>
-          <td class="table-cell"><%= food.price %></td>
+          <td class="table-cell"><%= number_to_currency(food.price) %></td>
           <td class="table-cell"><%= food.quantity %></td>
           <td class="table-cell">
             <%= button_to "Delete", "foods/#{food.id}", method: :delete, class: "delete-button" %>
