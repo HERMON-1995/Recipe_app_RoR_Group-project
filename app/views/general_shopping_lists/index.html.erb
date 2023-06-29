@@ -1,36 +1,37 @@
 <section class="shoppinglist-show">
   <h1 class="add-food-title">Shopping List</h1>
-    <% if @shoppinglist.empty? %>
-    <p> List is empty </p>
-    <% else @shoppinglist.empty? %>
+  <% if @shoppinglist.empty? %>
+    <p>List is empty</p>
+  <% else %>
     <div class="shoppinglist-headline">
       <p>
-        Ammout of food to buy: <%= @shoppinglist.count %>
+        Amount of food to buy: <%= @total_items %>
       </p>
       <p>
-        Total value of food needed: <%= number_to_currency(@shoppinglist.sum { |item| item[:price]}) %>
+        Total value of food needed: <%= number_to_currency(@total_price) %>
       </p>
-  </div>
-  <div class="shoppinglist-table">
-      <Table border="1" class="table-container">
-        <thead>
-          <tr class="table-header">
-            <th class="table-cell">Food</th>
-            <th class="table-cell">Quantity</th>
-            <th class="table-cell">Price</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% @shoppinglist.each do |recipefood| %>
-            <tr>
-              <td class="table-cell"><%= link_to recipefood[:food].name, food_path(recipefood[:food]) %></td>
-              <td class="table-cell"><%= "#{recipefood[:quantity]} #{recipefood[:food].measurement_unit}" %></td>
-              <td class="table-cell"><%= number_to_currency(recipefood[:price]) %></td>
-            </tr>
-          <% end %>
-        </tbody>
-      </Table>
     </div>
-      <%= link_to '<< Back to Recipes', recipes_path, class: 'new-link new_link2'%>
-    <% end %>
+
+    <div class="shoppinglist-table">
+    <table border="1" class="table-container">
+      <thead>
+        <tr class="table-header">
+          <th class="table-cell">Food</th>
+          <th class="table-cell">Quantity</th>
+          <th class="table-cell">Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @shoppinglist.each do |item| %>
+          <tr>
+            <td class="table-cell"><%= link_to item[:food].name, food_path(item[:food]) %></td>
+            <td class="table-cell"><%= "#{item[:quantity]} #{item[:food].measurement_unit}" %></td>
+            <td class="table-cell"><%= number_to_currency(item[:price]) %></td>
+          </tr>
+        <% end %>
+      </tbody>
+     </table>
+    </div>
+    <%= link_to '<< Back to Recipes', recipes_path, class: 'new-link new_link2'%>
+  <% end %>
 </section>
