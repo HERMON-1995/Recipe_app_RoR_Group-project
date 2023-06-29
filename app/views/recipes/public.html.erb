@@ -1,0 +1,19 @@
+<%= render 'shared/navigation' %>
+<section class='recipes'>
+    <h1>Here is the public recipe list</h1>
+    <% @recipes.each do |recipe| %>
+        
+    <div class='recipe-card'>
+        <%= link_to recipe_path(id: recipe.id) do%>
+            <div class='recipe-owner'>
+                <h2><%= recipe.name%></h2>
+                <p>By: <%= recipe.user.name%></p>
+            </div>
+            <div class='recipe-detail'>
+                <p>Total food items: <%= recipe.foods.count%></p>
+                <p>Total Price: $<%= RecipeFood.where(recipe_id: recipe.id).joins(:food).sum('recipe_foods.quantity * foods.price')%></p>
+            </div>
+        <% end %>
+    </div>
+    <% end %>
+</section>

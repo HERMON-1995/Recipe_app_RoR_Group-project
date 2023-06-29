@@ -1,0 +1,9 @@
+<div class='menu'>
+    <ul class='menu-list'>
+        <li><%= link_to 'Foods', foods_path%></li>
+        <li><%= link_to 'Recipes', recipes_path%></li>
+        <li><%= link_to 'Public Recipes', public_recipes_path%></li>
+        <li><%= link_to 'Shopping List', general_shopping_lists_path%></li>
+    </ul>
+    <%= button_to "logout", destroy_user_session_path , method: :delete, class: 'add-food-link' %>
+</div>

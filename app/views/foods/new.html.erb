@@ -1,0 +1,31 @@
+<h2 class="add-food-title">Add a new food</h2>
+
+<%= link_to '<< Back to Foods', foods_path, class: 'new-link new_link2'%>
+<%= form_with(model: @food, url: foods_path, method: :post) do |f| %>
+
+  <div class="new-form">
+    <div class="single-form-field">
+      <%= f.label :name %>
+      <%= f.text_field :name, autofocus: true, placeholder: "Food", required: true %>
+    </div>
+
+    <div class="single-form-field">
+      <%= f.label :measurement_unit %>
+      <%= f.text_field :measurement_unit, autofocus: true, placeholder: "KG/grams/dozen", required: true%>
+    </div>
+
+    <div class="single-form-field">
+      <%= f.label :price %>
+      <%= f.text_field :price, autocomplete: "price", placeholder: "$", required: true, autofocus: true%>
+    </div>
+
+    <div class="single-form-field">
+      <%= f.label :quantity %>
+      <%= f.text_field :quantity, autocomplete: "quantity", placeholder: "10", required: true, autofocus: true%>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Add food" %>
+    </div>
+  </div>
+<% end %>
