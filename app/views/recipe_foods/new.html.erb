@@ -1,0 +1,22 @@
+<h2 class="add-food-title">Add a new Ingedrient</h2>
+
+<%= form_with(model: @recipe_food, url: recipe_recipe_foods_path(@recipe), method: :post) do |f| %>
+
+  <div class="new-form">
+    <div class="single-form-field">
+      <%= f.label :food_id, 'Food' %>
+      <%= f.collection_select :food_id, Food.order(:name), :id, :name, required: true %>
+    </div>
+
+    <div class="single-form-field">
+      <%= f.label :quantity %>
+      <%= f.number_field :quantity, required: true%>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Add Ingedrient" %>
+    </div>
+  </div>
+<% end %>
+
+<%= link_to 'Add new food', new_food_path(@recipe) %>
