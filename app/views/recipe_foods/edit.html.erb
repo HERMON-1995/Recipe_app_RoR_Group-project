@@ -1,0 +1,17 @@
+<h2 class="add-food-title">Modify Ingedrient</h2>
+
+<%= form_with(model: @recipe_food, url: recipe_recipe_food_path(@recipe, @recipe_food), method: :patch) do |f| %>
+
+    <div class="new-form">
+    <p>Ingedrient: <%= @recipe_food.food.name %></p>
+
+    <div class="single-form-field">
+      <%= f.label :quantity %>
+      <%= f.text_field :quantity, required: true%>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Update Ingedrient" %>
+    </div>
+  </div>
+<% end %>
