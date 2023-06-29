@@ -1,5 +1,6 @@
 <h2 class="add-food-title">Add a new food</h2>
 
+<%= link_to '<< Back to Foods', foods_path, class: 'new-link new_link2'%>
 <%= form_with(model: @food, url: foods_path, method: :post) do |f| %>
 
   <div class="new-form">
