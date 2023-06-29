@@ -11,6 +11,8 @@ Rails.application.routes.draw do
     resources :recipe_foods, only: [:new, :create, :edit, :update,  :destroy]
   end
 
+  resources :general_shopping_lists, only: [:index]
+
   get '/public_recipes', to: 'recipes#public', as: 'public_recipes'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
