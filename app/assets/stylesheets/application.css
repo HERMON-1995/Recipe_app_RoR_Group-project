@@ -128,6 +128,11 @@ a {
   display: grid;
   grid-template-columns: 1fr 3fr;
   grid-template-rows: 1fr;
+  margin-bottom: 15px;
+}
+
+.recipe-card a:hover {
+  transform: scale(0.9);
 }
 
 .recipe {
@@ -330,4 +335,22 @@ a {
   flex-direction: column;
   border-radius: 5px;
   padding: 5px;
+}
+
+.new_link2 {
+  margin-left: 15rem;
+}
+
+.shoppinglist-headline {
+  display: flex;
+  justify-content: space-evenly;
+  width: 80%;
+  margin: 50px auto;
+}
+
+.shoppinglist-table {
+  display: flex;
+  justify-content: space-evenly;
+  width: 80%;
+  margin: 50px auto;
 }
