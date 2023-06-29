@@ -145,7 +145,6 @@ a {
 
 .recipe-info {
   width: 80%;
-
   position: relative;
 }
 
@@ -293,16 +292,16 @@ a {
   cursor: pointer;
 }
 
+.modify-button {
+  border-color: rgb(206, 134, 0);
+  color: rgb(206, 134, 0);
+}
+
 .delete-button:hover,
 .modify-button:hover {
   background-color: #dc3545;
   color: white;
   transition: all 0.2s;
-}
-
-.modify-button {
-  border-color: rgb(206, 134, 0);
-  color: rgb(206, 134, 0);
 }
 
 .modify-button:hover {
