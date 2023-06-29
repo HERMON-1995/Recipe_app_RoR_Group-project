@@ -1,5 +1,7 @@
 <section>
     <h1><%= @recipe.name %></h1>
+
+    <%= render partial: 'shared/toggle_btn', locals: {recipe: @recipe}%>
     <p><strong>Preparation time: <%= @recipe.preparation_time%></strong></p>
     <p><strong>Cooking time: <%= @recipe.cooking_time%></strong></p>
     <%if can? :manage, @recipe%>

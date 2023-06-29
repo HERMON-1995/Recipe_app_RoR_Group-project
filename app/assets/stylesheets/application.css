@@ -148,6 +148,7 @@ a {
   text-decoration: none;
   border: none;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .actions {
@@ -160,6 +161,7 @@ a {
   font-weight: 600;
   margin-top: 20px;
   margin-bottom: 30px;
+  cursor: pointer;
 }
 
 .add-food-link:hover,
@@ -185,19 +187,31 @@ a {
   padding: 0.75rem;
 }
 
-.delete-button {
+.delete-button,
+.modify-button {
   background-color: transparent;
   border: 1px solid #dc3545;
   color: #dc3545;
   padding: 0.375rem 0.75rem;
   text-decoration: none;
   border-radius: 0.25rem;
+  cursor: pointer;
 }
 
-.delete-button:hover {
+.delete-button:hover,
+.modify-button:hover {
   background-color: #dc3545;
   color: white;
   transition: all 0.2s;
+}
+
+.modify-button {
+  border: 1px solid rgb(206, 134, 0);
+  color: rgb(206, 134, 0);
+}
+
+.modify-button:hover {
+  background-color: rgb(206, 134, 0);
 }
 
 .add-food-title {
@@ -222,4 +236,38 @@ a {
   flex-direction: column;
   border-radius: 5px;
   padding: 5px;
+}
+
+.toggle-checkbox {
+  user-select: none;
+  opacity: 0;
+}
+
+.slider {
+  display: inline-block;
+  width: 30px;
+  height: 15px;
+  background: rgb(89, 89, 89);
+  border-radius: 20px;
+  position: relative;
+}
+
+.slider::after {
+  content: '';
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #ddd;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.toggle-checkbox:checked + .slider {
+  background: rgb(2, 177, 2);
+}
+
+.toggle-checkbox:checked + .slider::after {
+  background: #fff;
+  left: 50%;
 }
