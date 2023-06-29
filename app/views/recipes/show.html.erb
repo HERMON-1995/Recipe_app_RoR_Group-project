@@ -1,14 +1,16 @@
-<section>
+<section class='recipe'>
     <h1><%= @recipe.name %></h1>
 
-    <%= render partial: 'shared/toggle_btn', locals: {recipe: @recipe}%>
-    <p><strong>Preparation time: <%= @recipe.preparation_time%></strong></p>
-    <p><strong>Cooking time: <%= @recipe.cooking_time%></strong></p>
-    <%if can? :manage, @recipe%>
-        <p><i><%= @recipe.description%></i></p>
-    <% end %>
-    <%= link_to 'Back to Recipes', recipes_path%>
-    <div>
+    <div class='recipe-info'>
+        <%= render partial: 'shared/toggle_btn', locals: {recipe: @recipe}%>
+        <p><strong>Preparation time: <%= @recipe.preparation_time%></strong></p>
+        <p><strong>Cooking time: <%= @recipe.cooking_time%></strong></p>
+        <%if can? :manage, @recipe%>
+            <p><i><%= @recipe.description%></i></p>
+        <% end %>
+    </div>
+    <%= link_to '<< Back to Recipes', recipes_path, class: 'new-link'%>
+    <div class='link-group'>
         <%= link_to 'Generate Shopping List', recipes_path,  class: 'add-food-link'%>
         <%= link_to 'Add Ingedrient', new_recipe_recipe_food_path(@recipe),  class: 'add-food-link'%>
     </div>
@@ -29,8 +31,10 @@
                     <td class="table-cell"><%= recipe_food.quantity%></td>
                     <td class="table-cell"><%= recipe_food.quantity * recipe_food.food.price%></td>
                     <td class="table-cell">
-                        <%= link_to 'Modify',edit_recipe_recipe_food_path(@recipe,recipe_food), class: "modify-button"%>
-                        <%= button_to "Delete", recipe_recipe_food_path(@recipe, recipe_food), method: :delete, class: "delete-button" %>
+                        <div>
+                            <%= link_to 'Modify',edit_recipe_recipe_food_path(@recipe,recipe_food), class: "modify-button"%>
+                            <%= button_to "Delete", recipe_recipe_food_path(@recipe, recipe_food), method: :delete, class: "delete-button" %>
+                        </div>
                     </td>
                 </tr>
             <% end %>
